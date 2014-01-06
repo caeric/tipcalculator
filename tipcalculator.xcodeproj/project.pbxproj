@@ -19,6 +19,8 @@
 		EC3CD63E1876197500374F17 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3CD6261876197500374F17 /* UIKit.framework */; };
 		EC3CD6461876197500374F17 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC3CD6441876197500374F17 /* InfoPlist.strings */; };
 		EC3CD6481876197500374F17 /* tipcalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3CD6471876197500374F17 /* tipcalculatorTests.m */; };
+		EC3CD65418761C4E00374F17 /* TipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3CD65218761C4E00374F17 /* TipViewController.m */; };
+		EC3CD65518761C4E00374F17 /* TipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC3CD65318761C4E00374F17 /* TipViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		EC3CD6431876197500374F17 /* tipcalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tipcalculatorTests-Info.plist"; sourceTree = "<group>"; };
 		EC3CD6451876197500374F17 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EC3CD6471876197500374F17 /* tipcalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tipcalculatorTests.m; sourceTree = "<group>"; };
+		EC3CD65118761C4E00374F17 /* TipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipViewController.h; sourceTree = "<group>"; };
+		EC3CD65218761C4E00374F17 /* TipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipViewController.m; sourceTree = "<group>"; };
+		EC3CD65318761C4E00374F17 /* TipViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TipViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +116,9 @@
 				EC3CD6321876197500374F17 /* erhAppDelegate.m */,
 				EC3CD6341876197500374F17 /* Images.xcassets */,
 				EC3CD6291876197500374F17 /* Supporting Files */,
+				EC3CD65118761C4E00374F17 /* TipViewController.h */,
+				EC3CD65218761C4E00374F17 /* TipViewController.m */,
+				EC3CD65318761C4E00374F17 /* TipViewController.xib */,
 			);
 			path = tipcalculator;
 			sourceTree = "<group>";
@@ -192,6 +200,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Eric Hung";
 				TargetAttributes = {
+					EC3CD61E1876197500374F17 = {
+						DevelopmentTeam = NGMS3NY34X;
+					};
 					EC3CD6391876197500374F17 = {
 						TestTargetID = EC3CD61E1876197500374F17;
 					};
@@ -220,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC3CD65518761C4E00374F17 /* TipViewController.xib in Resources */,
 				EC3CD62D1876197500374F17 /* InfoPlist.strings in Resources */,
 				EC3CD6351876197500374F17 /* Images.xcassets in Resources */,
 			);
@@ -241,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC3CD6331876197500374F17 /* erhAppDelegate.m in Sources */,
+				EC3CD65418761C4E00374F17 /* TipViewController.m in Sources */,
 				EC3CD62F1876197500374F17 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,10 +373,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tipcalculator/tipcalculator-Prefix.pch";
 				INFOPLIST_FILE = "tipcalculator/tipcalculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -373,10 +390,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tipcalculator/tipcalculator-Prefix.pch";
 				INFOPLIST_FILE = "tipcalculator/tipcalculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
