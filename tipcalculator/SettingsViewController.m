@@ -9,6 +9,7 @@
 #import "SettingsViewController.h"
 
 @interface SettingsViewController ()
+@property (weak, nonatomic) IBOutlet UISegmentedControl *defaultTipSegmentedControl;
 
 @end
 
@@ -35,4 +36,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)onDefaultTapChanged:(id)sender {
+    NSLog(@"%d", self.defaultTipSegmentedControl.selectedSegmentIndex);
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger:self.defaultTipSegmentedControl.selectedSegmentIndex forKey:@"DEFAULT_TIP_AMOUNT"];
+    [defaults synchronize];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    NSLog(@"view will appear");
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    [self.defaultTipSegmentedControl setSelectedSegmentIndex: [defaults integerForKey:@"DEFAULT_TIP_AMOUNT"]]
+    ;
+}
 @end
