@@ -7,7 +7,7 @@
 //
 
 #import "TipViewController.h"
-
+#import "SettingsViewController.h"
 @interface TipViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *billTextField;
 
@@ -33,6 +33,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(onSettingsButton)];
     [self updateValue];
     // Do any additional setup after loading the view from its nib.
 }
@@ -59,5 +60,10 @@
 - (IBAction)onTap:(id)sender {
     [self.view endEditing:YES];
     [self updateValue];
+}
+
+- (void) onSettingsButton {
+    [self.navigationController pushViewController:[[SettingsViewController alloc]init] animated:YES];
+    
 }
 @end
